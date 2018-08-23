@@ -34,9 +34,9 @@ namespace RosSharp.RosBridgeClient.Protocols
         private const int ReceiveChunkSize = 1024;
         private const int SendChunkSize = 1024;
 
-        public event EventHandler OnReceive;
-        public event EventHandler OnConnected;
-        public event EventHandler OnClosed;
+        public event EventHandler OnReceive = delegate { };
+        public event EventHandler OnConnected = delegate { };
+        public event EventHandler OnClosed = delegate { };
 
         public WebSocketNetProtocol(string uriString)
         {
